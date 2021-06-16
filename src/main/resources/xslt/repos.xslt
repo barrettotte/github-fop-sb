@@ -13,34 +13,120 @@
             </fo:layout-master-set>
             <fo:page-sequence master-reference="A4">
                 <fo:flow flow-name="xsl-region-body">
-                    <xsl:call-template name="block-header"/>
-                    <xsl:call-template name="block-repos"/>
+                    <xsl:call-template name="header"/>
+                    <xsl:call-template name="repo-table"/>
                 </fo:flow>
             </fo:page-sequence>
         </fo:root>
     </xsl:template>
 
     <!-- Generate fo:block GitHub user header -->
-    <xsl:template name="block-header">
-        <fo:block font-size="15pt" font-weight="bold" space-after="7mm" text-align="center">
-            <xsl:value-of select="profile/name"/>'s Repositories
+    <xsl:template name="header">
+        <fo:block font-size="20pt" font-weight="bold" space-after="2mm" text-align="center">
+            <xsl:value-of select="profile/name"/>
+            <xsl:text>'s Repositories</xsl:text>
         </fo:block>
-        <xsl:call-template name="block-qrcode"/>
+        <fo:block font-size="13pt" text-align="center">
+            <xsl:call-template name="githubLink">
+                <xsl:with-param name="username">
+                    <xsl:value-of select="profile/username"/>
+                </xsl:with-param>
+            </xsl:call-template>
+        </fo:block>
+        <fo:block border-bottom-width="2pt" border-bottom-style="solid" margin-top="7mm" space-after="8mm"/>
     </xsl:template>
 
-    <!-- Generate fo:block QR code -->
-    <xsl:template name="block-qrcode">
-        <fo:block font-size="10pt" text-align="center">
-            https://github.com/<xsl:value-of select="profile/username"/>
-        </fo:block>
-        <!-- TODO: QR Code -->
+    <!-- Generate fo:table for all user's repositories -->
+    <xsl:template name="repo-table">
+        <xsl:variable name="username">
+            <xsl:value-of select="profile/username"/>
+        </xsl:variable>
+
+        <fo:table width="100%" border-collapse="separate" border-spacing="5pt 15pt">
+            <fo:table-column column-width="45mm"/>
+            <fo:table-column column-width="50mm"/>
+            <fo:table-column column-width="75mm"/>
+            <fo:table-body>
+                <xsl:for-each select="repositories/repo">
+                    <xsl:call-template name="repo-row">
+                        <xsl:with-param name="username">
+                            <xsl:value-of select="$username"/>
+                        </xsl:with-param>
+                    </xsl:call-template>
+                </xsl:for-each>
+            </fo:table-body>
+        </fo:table>
     </xsl:template>
 
-    <!-- Generate fo:block for list of repositories -->
-    <xsl:template name="block-repos">
-        <fo:block font-size="10pt">
-            TODO: repository lists
-        </fo:block>
+    <!-- Generate fo:table-row for a single repository -->
+    <xsl:template name="repo-row">
+        <xsl:param name="username"/>
+
+        <fo:table-row>
+            <fo:table-cell>
+                <fo:block font-size="14pt">
+                    <xsl:call-template name="githubLink">
+                        <xsl:with-param name="username">
+                            <xsl:value-of select="$username"/>
+                        </xsl:with-param>
+                        <xsl:with-param name="repoName">
+                            <xsl:value-of select="@name"/> 
+                        </xsl:with-param>
+                        <xsl:with-param name="linkText">
+                            <xsl:value-of select="@name"/>
+                        </xsl:with-param>
+                    </xsl:call-template>
+                </fo:block>
+            </fo:table-cell>
+            <fo:table-cell>
+                <fo:block font-size="12pt">
+                    <xsl:value-of select="@stars"/>
+                    <xsl:text>&#160;star(s)</xsl:text>
+                    <xsl:text>&#160;&#160;</xsl:text>
+                    <xsl:value-of select="@forks"/>
+                    <xsl:text>&#160;fork(s)</xsl:text>
+                </fo:block>
+            </fo:table-cell>
+            <fo:table-cell>
+                <fo:block font-size="12pt">
+                    <fo:block>
+                        <xsl:for-each select="languages/language">
+                            <xsl:value-of select="."/>
+                            <xsl:text>&#160;&#160;</xsl:text>
+                        </xsl:for-each>
+                    </fo:block>
+                </fo:block>
+            </fo:table-cell>
+        </fo:table-row>
+    </xsl:template>
+
+    <xsl:template name="githubLink">
+        <xsl:param name="username"/>
+        <xsl:param name="repoName"/>
+        <xsl:param name="linkText"/>
+
+        <xsl:variable name="location">
+            <xsl:value-of select="$username"/>
+            <xsl:if test="$repoName">    
+                <xsl:text>/</xsl:text>
+                <xsl:value-of select="$repoName"/>
+            </xsl:if>
+        </xsl:variable>
+        <xsl:variable name="link">
+            <xsl:text>https://github.com/</xsl:text>
+            <xsl:value-of select="$location"/>
+        </xsl:variable>
+
+        <fo:basic-link external-destination="{$link}" color="blue" text-decoration="underline">
+            <xsl:choose>
+                <xsl:when test="$linkText">
+                    <xsl:value-of select="$linkText"/>
+                </xsl:when>
+                <xsl:otherwise>
+                    <xsl:value-of select="$link"/>
+                </xsl:otherwise>
+            </xsl:choose>
+        </fo:basic-link>
     </xsl:template>
 
 </xsl:stylesheet>

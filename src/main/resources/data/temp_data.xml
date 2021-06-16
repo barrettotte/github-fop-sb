@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<github-user>
+  <profile>
+      <name>Barrett Otte</name>
+      <username>barrettotte</username>
+  </profile>
+  <repositories>
+    <repo name="project-1" stars="2" forks="1">
+      <languages>
+        <language>C</language>
+        <language>Makefile</language>
+        <language>C++</language>
+      </languages>
+    </repo>
+    <repo name="project-2" stars="2" forks="1">
+      <languages>
+        <language>Groovy</language>
+        <language>Java</language>
+      </languages>
+    </repo>
+    <repo name="project-3" stars="2" forks="1">
+      <languages>
+        <language>Python</language>
+      </languages>
+    </repo>
+    <repo name="project-4" stars="2" forks="1">
+      <languages>
+        <language>Assembly</language>
+      </languages>
+    </repo>
+    <repo name="project-5" stars="2" forks="1">
+      <languages>
+        <language>Go</language>
+        <language>Assembly</language>
+        <language>Makefile</language>
+      </languages>
+    </repo>
+  </repositories>
+</github-user>
