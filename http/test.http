@@ -1,0 +1,25 @@
+# Test fetching a user's public repos
+
+@base=https://api.github.com
+@username=barrettotte
+
+
+### Get user
+GET {{base}}/users/{{username}} HTTP/1.1
+Accept: application/vnd.github.v3+json
+
+
+### Get user's repos
+GET {{base}}/users/{{username}}/repos HTTP/1.1
+Accept: application/vnd.github.v3+json
+
+
+### Get user;  user(login: "barrettotte") or viewer
+POST https://api.github.com/graphql HTTP/1.1
+Content-Type: application/json
+Authorization: Bearer xxx
+
+{
+    "query": "query{viewer{login name repositories(first:25,isFork:false){nodes{name description stargazers{totalCount} forkCount languages(first:3,orderBy:{field:SIZE,direction:DESC}){nodes{name color}}}}}}",
+    "variables": {}
+}

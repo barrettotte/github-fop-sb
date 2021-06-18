@@ -24,7 +24,6 @@
     <xsl:template name="header">
         <fo:block font-size="20pt" font-weight="bold" space-after="2mm" text-align="center">
             <xsl:value-of select="profile/name"/>
-            <xsl:text>'s Repositories</xsl:text>
         </fo:block>
         <fo:block font-size="13pt" text-align="center">
             <xsl:call-template name="githubLink">
@@ -100,6 +99,7 @@
         </fo:table-row>
     </xsl:template>
 
+    <!-- Generate github url fo:basic-link -->
     <xsl:template name="githubLink">
         <xsl:param name="username"/>
         <xsl:param name="repoName"/>

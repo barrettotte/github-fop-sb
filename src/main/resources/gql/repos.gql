@@ -1,0 +1,22 @@
+query { 
+  viewer { 
+    login
+    name
+    repositories(first: 50, isFork: false) {
+      nodes {
+        name
+        description
+        stargazers {
+          totalCount
+        }
+        forkCount
+        languages(first: 3, orderBy: {field: SIZE, direction: DESC}) {
+          nodes {
+            name
+            color
+          }
+        }
+      }
+    }
+  }
+}
