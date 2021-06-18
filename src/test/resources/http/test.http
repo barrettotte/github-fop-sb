@@ -1,6 +1,6 @@
 # Test fetching a user's public repos
 
-@base=
+@base=https://api.github.com
 @username=barrettotte
 
 
@@ -20,6 +20,6 @@ Content-Type: application/json
 Authorization: Bearer xxx
 
 {
-    "query": "query{viewer{login name repositories(first:50,isFork:false){nodes{name description stargazers{totalCount} forkCount languages(first:3,orderBy:{field:SIZE,direction:DESC}){nodes{name color}}}}}}",
+    "query": "query{viewer{login name repositories(first:50,isFork:false){nodes{name stargazers{totalCount} forkCount languages(first:3,orderBy:{field:SIZE,direction:DESC}){nodes{name color}}}}}}",
     "variables": {}
 }

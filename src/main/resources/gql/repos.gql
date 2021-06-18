@@ -5,7 +5,6 @@ query {
     repositories(first: 50, isFork: false) {
       nodes {
         name
-        description
         stargazers {
           totalCount
         }
