@@ -1,4 +1,4 @@
-package com.github.barrettotte.fopsb;
+package com.github.barrettotte.fopsb.utils;
 
 import java.io.File;
 import java.io.FileOutputStream;

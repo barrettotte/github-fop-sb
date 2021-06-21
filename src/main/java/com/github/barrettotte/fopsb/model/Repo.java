@@ -3,11 +3,24 @@ package com.github.barrettotte.fopsb.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+
+@JacksonXmlRootElement(localName="repo")
 public class Repo {
 
+    @JacksonXmlProperty(isAttribute = true)
     private String name;
+    
+    @JacksonXmlProperty(isAttribute = true)
     private Integer stars;
+
+    @JacksonXmlProperty(isAttribute = true)
     private Integer forks;
+
+    @JacksonXmlElementWrapper(localName = "languages")
+    @JacksonXmlProperty(localName = "language")
     private List<Language> topLangs;
 
     public Repo() {

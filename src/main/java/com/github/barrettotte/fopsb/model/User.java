@@ -3,10 +3,21 @@ package com.github.barrettotte.fopsb.model;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlElementWrapper;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+
+@JacksonXmlRootElement(localName="user")
 public class User {
 
+    @JacksonXmlProperty(isAttribute = true)
     private String username;
+
+    @JacksonXmlProperty(isAttribute = true)
     private String name;
+
+    @JacksonXmlElementWrapper(localName="repositories")
+    @JacksonXmlProperty(localName = "repo")
     private List<Repo> repos;
 
     public User() {

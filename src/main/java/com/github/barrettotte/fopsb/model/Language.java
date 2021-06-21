@@ -1,8 +1,15 @@
 package com.github.barrettotte.fopsb.model;
 
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlProperty;
+import com.fasterxml.jackson.dataformat.xml.annotation.JacksonXmlRootElement;
+
+@JacksonXmlRootElement(localName = "language")
 public class Language {
 
+    @JacksonXmlProperty(isAttribute = true)
     private String name;
+
+    @JacksonXmlProperty(localName = "color", isAttribute = true)
     private String colorHex;
 
     public Language() {}

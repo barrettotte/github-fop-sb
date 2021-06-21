@@ -1,39 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<github-user>
-  <profile>
-      <name>Barrett Otte</name>
-      <username>barrettotte</username>
-  </profile>
+<user name="Barrett Otte" username="barrettotte">
   <repositories>
     <repo name="project-1" stars="2" forks="1">
       <languages>
-        <language>C</language>
-        <language>Makefile</language>
-        <language>C++</language>
+        <language name="C" color="#555555"/>
+        <language name="Makefile" color ="#555555"/>
+        <language name="C++" color="#555555"/>
       </languages>
     </repo>
     <repo name="project-2" stars="2" forks="1">
       <languages>
-        <language>Groovy</language>
-        <language>Java</language>
+        <language name="Groovy" color="#e69f56"/>
+        <language name="Java" color="#b07219"/>
       </languages>
     </repo>
     <repo name="project-3" stars="2" forks="1">
       <languages>
-        <language>Python</language>
+        <language name="Python" color="#3572A5"/>
       </languages>
     </repo>
     <repo name="project-4" stars="2" forks="1">
       <languages>
-        <language>Assembly</language>
+        <language name="Assembly" color="#6E4C13"/>
       </languages>
     </repo>
     <repo name="project-5" stars="2" forks="1">
       <languages>
-        <language>Go</language>
-        <language>Assembly</language>
-        <language>Makefile</language>
+        <language name="Go" color="#6E4C13"/>
+        <language name="Assembly" color="#6E4C13"/>
+        <language name="Makefile" color="#555555"/>
       </languages>
     </repo>
   </repositories>
-</github-user>
+</user>

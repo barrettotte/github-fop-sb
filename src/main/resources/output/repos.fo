@@ -1,1 +1,143 @@
-<?xml version="1.0" encoding="UTF-8"?><fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format"><fo:layout-master-set><fo:simple-page-master margin-right="1in" margin-left="1in" margin-bottom="0.5in" margin-top="0.5in" page-width="8.5in" page-height="11in" master-name="A4"><fo:region-body/></fo:simple-page-master></fo:layout-master-set><fo:page-sequence master-reference="A4"><fo:flow flow-name="xsl-region-body"><fo:block text-align="center" space-after="2mm" font-weight="bold" font-size="20pt">Barrett Otte</fo:block><fo:block text-align="center" font-size="13pt"><fo:basic-link text-decoration="underline" color="blue" external-destination="https://github.com/barrettotte">https://github.com/barrettotte</fo:basic-link></fo:block><fo:block space-after="8mm" margin-top="7mm" border-bottom-style="solid" border-bottom-width="2pt"/><fo:table border-spacing="5pt 15pt" border-collapse="separate" width="100%"><fo:table-column column-width="45mm"/><fo:table-column column-width="50mm"/><fo:table-column column-width="75mm"/><fo:table-body><fo:table-row><fo:table-cell><fo:block font-size="14pt"><fo:basic-link text-decoration="underline" color="blue" external-destination="https://github.com/barrettotte/project-1">project-1</fo:basic-link></fo:block></fo:table-cell><fo:table-cell><fo:block font-size="12pt">2 star(s)  1 fork(s)</fo:block></fo:table-cell><fo:table-cell><fo:block font-size="12pt"><fo:block>C  Makefile  C++  </fo:block></fo:block></fo:table-cell></fo:table-row><fo:table-row><fo:table-cell><fo:block font-size="14pt"><fo:basic-link text-decoration="underline" color="blue" external-destination="https://github.com/barrettotte/project-2">project-2</fo:basic-link></fo:block></fo:table-cell><fo:table-cell><fo:block font-size="12pt">2 star(s)  1 fork(s)</fo:block></fo:table-cell><fo:table-cell><fo:block font-size="12pt"><fo:block>Groovy  Java  </fo:block></fo:block></fo:table-cell></fo:table-row><fo:table-row><fo:table-cell><fo:block font-size="14pt"><fo:basic-link text-decoration="underline" color="blue" external-destination="https://github.com/barrettotte/project-3">project-3</fo:basic-link></fo:block></fo:table-cell><fo:table-cell><fo:block font-size="12pt">2 star(s)  1 fork(s)</fo:block></fo:table-cell><fo:table-cell><fo:block font-size="12pt"><fo:block>Python  </fo:block></fo:block></fo:table-cell></fo:table-row><fo:table-row><fo:table-cell><fo:block font-size="14pt"><fo:basic-link text-decoration="underline" color="blue" external-destination="https://github.com/barrettotte/project-4">project-4</fo:basic-link></fo:block></fo:table-cell><fo:table-cell><fo:block font-size="12pt">2 star(s)  1 fork(s)</fo:block></fo:table-cell><fo:table-cell><fo:block font-size="12pt"><fo:block>Assembly  </fo:block></fo:block></fo:table-cell></fo:table-row><fo:table-row><fo:table-cell><fo:block font-size="14pt"><fo:basic-link text-decoration="underline" color="blue" external-destination="https://github.com/barrettotte/project-5">project-5</fo:basic-link></fo:block></fo:table-cell><fo:table-cell><fo:block font-size="12pt">2 star(s)  1 fork(s)</fo:block></fo:table-cell><fo:table-cell><fo:block font-size="12pt"><fo:block>Go  Assembly  Makefile  </fo:block></fo:block></fo:table-cell></fo:table-row></fo:table-body></fo:table></fo:flow></fo:page-sequence></fo:root>
+<?xml version="1.0" encoding="UTF-8"?><fo:root xmlns:fo="http://www.w3.org/1999/XSL/Format">
+<fo:layout-master-set>
+<fo:simple-page-master margin-right="1in" margin-left="1in" margin-bottom="0.5in" margin-top="0.5in" page-width="8.5in" page-height="11in" master-name="A4">
+<fo:region-body/>
+</fo:simple-page-master>
+</fo:layout-master-set>
+<fo:page-sequence master-reference="A4">
+<fo:flow flow-name="xsl-region-body">
+<fo:block text-align="center" space-after="2mm" font-weight="bold" font-size="20pt">Barrett Otte</fo:block>
+<fo:block text-align="center" font-size="13pt">
+<fo:basic-link text-decoration="underline" color="blue" external-destination="https://github.com/barrettotte">https://github.com/barrettotte</fo:basic-link>
+</fo:block>
+<fo:block space-after="8mm" margin-top="7mm" border-bottom-style="solid" border-bottom-width="2pt"/>
+<fo:table border-spacing="5pt 15pt" border-collapse="separate" width="100%">
+<fo:table-column column-width="70mm"/>
+<fo:table-column column-width="25mm"/>
+<fo:table-column column-width="80mm"/>
+<fo:table-body>
+<fo:table-row>
+<fo:table-cell>
+<fo:block font-size="12pt">
+<fo:basic-link text-decoration="underline" color="blue" external-destination="https://github.com/barrettotte/project-1">project-1</fo:basic-link>
+</fo:block>
+</fo:table-cell>
+<fo:table-cell>
+<fo:block font-size="12pt"> ★ 2</fo:block>
+</fo:table-cell>
+<fo:table-cell>
+<fo:block font-size="12pt">
+<fo:block>
+<fo:instream-foreign-object>
+<svg xmlns="http://www.w3.org/2000/svg" viewport="0 0 0 3" width="6" height="9">
+<circle fill="rgb(85,85,85)" r="3" cy="5" cx="3"/>
+</svg>
+</fo:instream-foreign-object> C   <fo:instream-foreign-object>
+<svg xmlns="http://www.w3.org/2000/svg" viewport="0 0 0 3" width="6" height="9">
+<circle fill="rgb(85,85,85)" r="3" cy="5" cx="3"/>
+</svg>
+</fo:instream-foreign-object> Makefile   <fo:instream-foreign-object>
+<svg xmlns="http://www.w3.org/2000/svg" viewport="0 0 0 3" width="6" height="9">
+<circle fill="rgb(85,85,85)" r="3" cy="5" cx="3"/>
+</svg>
+</fo:instream-foreign-object> C++   </fo:block>
+</fo:block>
+</fo:table-cell>
+</fo:table-row>
+<fo:table-row>
+<fo:table-cell>
+<fo:block font-size="12pt">
+<fo:basic-link text-decoration="underline" color="blue" external-destination="https://github.com/barrettotte/project-2">project-2</fo:basic-link>
+</fo:block>
+</fo:table-cell>
+<fo:table-cell>
+<fo:block font-size="12pt"> ★ 2</fo:block>
+</fo:table-cell>
+<fo:table-cell>
+<fo:block font-size="12pt">
+<fo:block>
+<fo:instream-foreign-object>
+<svg xmlns="http://www.w3.org/2000/svg" viewport="0 0 0 3" width="6" height="9">
+<circle fill="rgb(230,159,86)" r="3" cy="5" cx="3"/>
+</svg>
+</fo:instream-foreign-object> Groovy   <fo:instream-foreign-object>
+<svg xmlns="http://www.w3.org/2000/svg" viewport="0 0 0 3" width="6" height="9">
+<circle fill="rgb(176,114,25)" r="3" cy="5" cx="3"/>
+</svg>
+</fo:instream-foreign-object> Java   </fo:block>
+</fo:block>
+</fo:table-cell>
+</fo:table-row>
+<fo:table-row>
+<fo:table-cell>
+<fo:block font-size="12pt">
+<fo:basic-link text-decoration="underline" color="blue" external-destination="https://github.com/barrettotte/project-3">project-3</fo:basic-link>
+</fo:block>
+</fo:table-cell>
+<fo:table-cell>
+<fo:block font-size="12pt"> ★ 2</fo:block>
+</fo:table-cell>
+<fo:table-cell>
+<fo:block font-size="12pt">
+<fo:block>
+<fo:instream-foreign-object>
+<svg xmlns="http://www.w3.org/2000/svg" viewport="0 0 0 3" width="6" height="9">
+<circle fill="rgb(53,114,165)" r="3" cy="5" cx="3"/>
+</svg>
+</fo:instream-foreign-object> Python   </fo:block>
+</fo:block>
+</fo:table-cell>
+</fo:table-row>
+<fo:table-row>
+<fo:table-cell>
+<fo:block font-size="12pt">
+<fo:basic-link text-decoration="underline" color="blue" external-destination="https://github.com/barrettotte/project-4">project-4</fo:basic-link>
+</fo:block>
+</fo:table-cell>
+<fo:table-cell>
+<fo:block font-size="12pt"> ★ 2</fo:block>
+</fo:table-cell>
+<fo:table-cell>
+<fo:block font-size="12pt">
+<fo:block>
+<fo:instream-foreign-object>
+<svg xmlns="http://www.w3.org/2000/svg" viewport="0 0 0 3" width="6" height="9">
+<circle fill="rgb(110,76,19)" r="3" cy="5" cx="3"/>
+</svg>
+</fo:instream-foreign-object> Assembly   </fo:block>
+</fo:block>
+</fo:table-cell>
+</fo:table-row>
+<fo:table-row>
+<fo:table-cell>
+<fo:block font-size="12pt">
+<fo:basic-link text-decoration="underline" color="blue" external-destination="https://github.com/barrettotte/project-5">project-5</fo:basic-link>
+</fo:block>
+</fo:table-cell>
+<fo:table-cell>
+<fo:block font-size="12pt"> ★ 2</fo:block>
+</fo:table-cell>
+<fo:table-cell>
+<fo:block font-size="12pt">
+<fo:block>
+<fo:instream-foreign-object>
+<svg xmlns="http://www.w3.org/2000/svg" viewport="0 0 0 3" width="6" height="9">
+<circle fill="rgb(110,76,19)" r="3" cy="5" cx="3"/>
+</svg>
+</fo:instream-foreign-object> Go   <fo:instream-foreign-object>
+<svg xmlns="http://www.w3.org/2000/svg" viewport="0 0 0 3" width="6" height="9">
+<circle fill="rgb(110,76,19)" r="3" cy="5" cx="3"/>
+</svg>
+</fo:instream-foreign-object> Assembly   <fo:instream-foreign-object>
+<svg xmlns="http://www.w3.org/2000/svg" viewport="0 0 0 3" width="6" height="9">
+<circle fill="rgb(85,85,85)" r="3" cy="5" cx="3"/>
+</svg>
+</fo:instream-foreign-object> Makefile   </fo:block>
+</fo:block>
+</fo:table-cell>
+</fo:table-row>
+</fo:table-body>
+</fo:table>
+</fo:flow>
+</fo:page-sequence>
+</fo:root>
