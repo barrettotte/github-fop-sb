@@ -1,0 +1,31 @@
+# "variables":{"queryString":"user:barrettotte is:public"}
+#
+# feed endCursor into queryString ->  after:"<end-cursor>"
+#
+query($queryString: String!) {
+  search(query: $queryString, first: 50, type: REPOSITORY) {
+    repositoryCount
+    pageInfo {
+      startCursor
+      hasNextPage
+      endCursor
+    }
+    edges {
+      node {
+        ... on Repository {
+          name
+          stargazers {
+            totalCount
+          }
+          forkCount
+          languages(first: 3, orderBy: {field: SIZE, direction: DESC}) {
+            nodes {
+              name
+              color
+            }
+          }
+        }
+      }
+    }
+  }
+}

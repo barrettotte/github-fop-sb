@@ -1,3 +1,5 @@
+# simple query to get first 50 repositories of current user
+#    viewer == currently authenticated user
 query { 
   viewer { 
     login
