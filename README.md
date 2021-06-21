@@ -1,6 +1,6 @@
 # github-fop-sb
 
-A mini project to generate a basic report of a GitHub user's stats/repos with Spring Boot, Apache FOP and XSLT.
+A mini project to generate a basic report of a GitHub user's repos using SpringBoot, Apache FOP and XSLT.
 
 ## Endpoints
 
