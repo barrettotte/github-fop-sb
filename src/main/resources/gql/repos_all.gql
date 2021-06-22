@@ -1,9 +1,9 @@
-# "variables":{"queryString":"user:barrettotte is:public"}
+# Query to retrieve all repositories for a user - 50 items per page
 #
-# feed endCursor into queryString ->  after:"<end-cursor>"
+# "variables":{"queryString":"user:barrettotte is:public", "after": "<end-cursor>"}
 #
-query($queryString: String!) {
-  search(query: $queryString, first: 50, type: REPOSITORY) {
+query($queryString: String!, $after: String) {
+  search(type: REPOSITORY, query: $queryString, after: $after, first: 50) {
     repositoryCount
     pageInfo {
       startCursor
