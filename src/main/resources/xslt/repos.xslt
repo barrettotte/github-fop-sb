@@ -45,8 +45,8 @@
 
         <fo:table width="100%" border-collapse="separate" border-spacing="5pt 15pt">
             <fo:table-column column-width="70mm"/>
-            <fo:table-column column-width="25mm"/>
-            <fo:table-column column-width="80mm"/>
+            <fo:table-column column-width="20mm"/>
+            <fo:table-column column-width="90mm"/>
             <fo:table-body>
                 <xsl:for-each select="repositories/repo">
                     <xsl:sort select="@name"/>
