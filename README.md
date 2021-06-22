@@ -1,6 +1,6 @@
 # github-fop-sb
 
-A mini project to generate a basic report of a GitHub user's repos using SpringBoot, Apache FOP and XSLT.
+A mini project to generate a basic PDF of a GitHub user's repos using SpringBoot, Apache FOP and XSLT.
 Definitely not the best, but it was a fun thing to mess around with for a bit.
 
 ## Test Calls
