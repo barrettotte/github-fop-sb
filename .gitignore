@@ -34,3 +34,4 @@ out/
 .settings/
 build/
 *.env
+application.properties
